@@ -29,13 +29,3 @@ buttonMore.addEventListener("click", (event) => {
         buttonMore.textContent = "More";
     }
 });
-
-var link = document.getElementById('toggle-link');
-var isAbout = false;
-
-const toggleLinkText = () => {
-  isAbout = !isAbout;
-  link.href = isAbout ? '#find-me' : '#about';
-  link.textContent = isAbout ? 'About' : 'Find Me';
-}
-link.addEventListener('click', toggleLinkText);

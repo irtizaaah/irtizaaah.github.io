@@ -80,9 +80,30 @@ header{
 
 header .container{
     width: 80vw;
+    max-width: 1000px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+nav ul{
+    display: flex;
+}
+
+nav ul li{
+    margin: 1rem;
+}
+
+nav ul li a{
+    font-weight: 700;
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    text-decoration: underline;
+}
+nav ul li a:active{
+    text-decoration: none;
 }
 
 svg > *{
@@ -158,17 +179,17 @@ section{
     margin: 3px;
 }
 
-.resume{
+.cv{
     display: flex;
 }
 
-.resume > .container{
+.cv > .container{
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
 }
 
-.resume > .container > *{
+.cv > .container > *{
     margin: 1rem;
 }
 
