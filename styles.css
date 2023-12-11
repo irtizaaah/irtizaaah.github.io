@@ -91,7 +91,8 @@ nav ul{
 }
 
 nav ul li{
-    margin: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 nav ul li a{
@@ -187,6 +188,7 @@ section{
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    padding: 1rem;
 }
 
 .cv > .container > *{
@@ -201,5 +203,9 @@ section{
 
     .about-summary {
         width: 80vw;
+    }
+
+    .cv > .container{
+        flex-direction: column;
     }
 }
