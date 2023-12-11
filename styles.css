@@ -21,6 +21,7 @@ body{
     user-select: none; /* disable selection */
     -webkit-user-select: none;
 }
+
 /* enable selection */
 .selectable{
     user-select: auto;
@@ -28,8 +29,24 @@ body{
 }
 
 h1,h2,h3,p,a{
-    font-family: 'Inter', sans-serif;;
     color: var(--text-color);
+}
+
+p,a{
+    font-family: 'Inter', sans-serif;
+}
+
+h1,h2,h3{
+    font-family: 'Space Mono', monospace;
+}
+h2{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+h3{
+    font-size: 1rem;
+    font-weight: 400;
+    text-decoration: underline;
 }
 
 button{
@@ -46,13 +63,29 @@ ul{
 
 header{
     position: fixed;
+
     top: 0;
-    margin: 2rem;
-    width: 100%;
+    padding: 2rem;
+    width: 100vw;
+
+    left: 50%;
+    transform: translateX(-50%);
+
     z-index: 1000;
+
+    display: flex;
+    justify-content: center;
+    background-color: var(--background-color);
 }
 
-path{
+header .container{
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+svg > *{
     fill: var(--text-color)
 }
 
@@ -90,7 +123,7 @@ section{
     font-size: 8vw;
 
     width: 6ch;
-    animation: typing 2s steps(6), blink .3s step-end infinite alternate;
+    animation: typing 1s steps(6), blink .3s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
     border-right: 1px solid;
@@ -125,6 +158,20 @@ section{
     margin: 3px;
 }
 
+.resume{
+    display: flex;
+}
+
+.resume > .container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.resume > .container > *{
+    margin: 1rem;
+}
+
 @media only screen and (max-width: 767px) {
     /* Styles for screens up to 767px (typical iPhone portrait width) */
     .about-heading {
@@ -132,6 +179,6 @@ section{
     }
 
     .about-summary {
-        width: 70vw;
+        width: 80vw;
     }
 }
