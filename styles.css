@@ -65,7 +65,7 @@ header{
     position: fixed;
 
     top: 0;
-    padding: 2rem;
+    padding: 1rem;
     width: 100vw;
 
     left: 50%;
@@ -96,6 +96,7 @@ nav ul li{
 }
 
 nav ul li a{
+    font-size: 0.8rem;
     font-weight: 700;
     text-decoration: none;
 }
@@ -207,5 +208,21 @@ section{
 
     .cv > .container{
         flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    p,a{
+        font-size:0.9rem;
+    }
+    
+    h1,h2,h3{
+        font-family: 'Space Mono', monospace;
+    }
+    h2{
+        font-size: 1rem;
+    }
+    h3{
+        font-size: 0.9rem;
     }
 }
