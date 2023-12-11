@@ -65,7 +65,7 @@ header{
     position: fixed;
 
     top: 0;
-    padding: 1rem;
+    padding: 2rem;
     width: 100vw;
 
     left: 50%;
@@ -220,7 +220,7 @@ section{
         font-family: 'Space Mono', monospace;
     }
     h2{
-        font-size: 1rem;
+        font-size: 1.4rem;
     }
     h3{
         font-size: 0.9rem;
