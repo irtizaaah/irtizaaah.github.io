@@ -268,3 +268,17 @@ section{
         font-size: 2vh;
     }
 }
+.warning-landscape_mode{
+    display: none;
+}
+@media screen and (orientation: landscape) {
+    .warning-landscape_mode{
+        display: inline-block;
+    }
+    body > *:not(:first-child) { /* targets every child except first one */
+      /* Add styles to be applied when in landscape mode */
+      display: none; 
+    }
+
+  }
+  
