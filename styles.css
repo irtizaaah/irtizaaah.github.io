@@ -29,7 +29,10 @@ body{
     user-select: auto;
     -webkit-user-select: auto;
 }
-
+/* 
+- sizes are in 'em' units so they change relative to the base size set in their parent containers
+- the font size in the parent containers are changed based on the device screen size
+*/
 p,a{
     color: var(--text-color);
     font-family: 'Inter', sans-serif;
