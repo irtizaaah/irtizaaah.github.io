@@ -23,9 +23,9 @@ buttonMore.addEventListener("click", (event) => {
     var moreSummary = document.getElementById("about-more_summary");
     if (moreSummary.style.display === "none" || moreSummary.style.display === "") {
         moreSummary.style.display = "block";
-        buttonMore.innerHTML = "<p>Less</p>";
+        buttonMore.innerHTML = "<p>Read Less</p>";
     } else {
         moreSummary.style.display = "none";
-        buttonMore.innerHTML = "<p>More</p>";
+        buttonMore.innerHTML = "<p>Read More</p>";
     }
 });

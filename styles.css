@@ -184,7 +184,7 @@ section{
 
 #about-more_button{
     color: var(--text-color);
-    text-decoration: underline; 
+    font-weight: 700;
 }
 
 #about-more_summary{
