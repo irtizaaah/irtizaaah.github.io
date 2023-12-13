@@ -1,6 +1,7 @@
 :root {
-    --background-color: #ffff;
-    --text-color: #0F0E0E;
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --secondary-text-color: #6a7280;
 }
 
 * {
@@ -12,7 +13,8 @@
 /* Dark Mode */
 body.theme-dark {
     --background-color: #000000;
-    --text-color: #ffff;
+    --text-color: #ffffff;
+    --secondary-text-color: #B6BBC4;
 }
 
 body{
@@ -28,25 +30,38 @@ body{
     -webkit-user-select: auto;
 }
 
-h1,h2,h3,p,a{
-    color: var(--text-color);
-}
-
 p,a{
+    color: var(--text-color);
     font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
 }
 
-h1,h2,h3{
+h1{
+    color: var(--text-color);
     font-family: 'Space Mono', monospace;
 }
 h2{
-    font-size: 1.5rem;
-    font-weight: 400;
+    color: var(--text-color);
+    font-family: 'Inter', monospace;
+    font-weight: 700;
 }
 h3{
+    font-family: 'Space Mono', monospace;
+    color: var(--text-color);
+    font-weight: 400;
+}
+h4{
+    font-family: 'Space Mono', monospace;
+    color: var(--text-color);
     font-size: 1rem;
     font-weight: 400;
     text-decoration: underline;
+}
+h5{
+    font-family: 'Inter';
+    color: var(--secondary-text-color);
+    font-size: 0.8rem;
+    font-weight: 400;
 }
 
 button{
@@ -76,6 +91,7 @@ header{
     display: flex;
     justify-content: center;
     background-color: var(--background-color);
+    /*border-bottom: 1px solid var(--secondary-text-color);*/
 }
 
 header .container{
@@ -106,6 +122,14 @@ nav ul li a:hover{
 }
 nav ul li a:active{
     text-decoration: none;
+}
+
+.heading-container{
+    width: 80vw;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 svg > *{
@@ -140,7 +164,7 @@ section{
         border-color: transparent;
     }
 }
-.about-heading{
+.about .heading{
     font-family: 'Space Mono', monospace;
     font-weight: 400;
     font-size: 8vw;
@@ -153,7 +177,7 @@ section{
     margin-bottom: 0.3em;
 }
 
-.about-summary{
+.about .summary{
     width: 40vw;
     text-align: center;
 }
@@ -167,7 +191,7 @@ section{
     display: none;
 }
 
-.about-exit{
+.about .exit{
     position: relative;
     top: 10%;
     margin-top: 5rem;
@@ -177,7 +201,7 @@ section{
     align-items: center;
 }
 
-.about-exit > *{
+.about .exit > *{
     margin: 3px;
 }
 
@@ -195,6 +219,9 @@ section{
 .cv > .container > *{
     margin: 1rem;
 }
+.tab {
+    padding-left: 0rem;
+}
 
 @media only screen and (max-width: 767px) {
     /* Styles for screens up to 767px (typical iPhone portrait width) */
@@ -211,18 +238,23 @@ section{
     }
 }
 
-@media only screen and (max-width: 460px) {
-    p,a{
-        font-size:0.9rem;
+@media only screen and (max-width: 375px) {
+    main{
+        overflow-y: scroll;
+        scroll-snap-type: none;
     }
     
-    h1,h2,h3{
-        font-family: 'Space Mono', monospace;
+    section{
+        scroll-snap-align: unset;
     }
-    h2{
-        font-size: 1.4rem;
+}
+
+@media only screen and (max-width: 800px) {
+    .about .heading{
+        font-size: 15vw;
     }
-    h3{
-        font-size: 0.9rem;
+    
+    .about .summary{
+        width: 80vw;
     }
 }
