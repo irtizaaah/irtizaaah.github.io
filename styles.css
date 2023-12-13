@@ -216,14 +216,14 @@ section{
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 1rem;
+    padding: 1em;
 }
 
 .cv .container > *{
-    margin: 1rem;
+    margin: 1em;
 }
 .tab {
-    padding-left: 0rem;
+    padding-left: 0em;
 }
 
 @media only screen and (max-width: 767px) {
@@ -261,16 +261,7 @@ section{
         width: 80vw;
     }
     
-    .cv .container{
-        justify-content: flex-start;
-        align-items: flex-start;
-        padding: 2rem;
-    }
-
-    .cv .container{
-        justify-content: flex-start;
-        align-items: flex-start;
-        padding: 2rem;
-        font-size: 14px;
+    .cv{
+        font-size: 2vh;
     }
 }
