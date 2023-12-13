@@ -255,6 +255,9 @@ section{
     }
 }
 
+.warning-landscape_mode{
+    display: none;
+}
 @media only screen and (max-width: 800px) {
     .about .heading{
         font-size: 15vw;
@@ -268,23 +271,21 @@ section{
         font-size: 2vh;
     }
 }
-.warning-landscape_mode{
-    display: none;
+@media only screen and (max-height: 490px) {
+    @media screen and (orientation: landscape) {
+        .warning-landscape_mode{
+            display: inline-block;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        body > *:not(:first-child) { /* targets every child except first one */
+          /* Add styles to be applied when in landscape mode */
+          display: none; 
+        }
+    }
 }
-@media screen and (orientation: landscape) {
-    .warning-landscape_mode{
-        display: inline-block;
-    }
-    body{
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    body > *:not(:first-child) { /* targets every child except first one */
-      /* Add styles to be applied when in landscape mode */
-      display: none; 
-    }
-
-  }
   
