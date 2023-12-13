@@ -275,6 +275,12 @@ section{
     .warning-landscape_mode{
         display: inline-block;
     }
+    body{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     body > *:not(:first-child) { /* targets every child except first one */
       /* Add styles to be applied when in landscape mode */
       display: none; 
