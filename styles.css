@@ -19,7 +19,6 @@ body.theme-dark {
 
 body{
     background-color: var(--background-color);
-    margin: 0;
     user-select: none; /* disable selection */
     -webkit-user-select: none;
 }
@@ -46,18 +45,18 @@ h1{
 }
 h2{
     color: var(--text-color);
-    font-family: 'Inter', monospace;
-    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
     font-size: 1.2em;
 }
 h3{
-    font-family: 'Space Mono', monospace;
+    font-family: 'Inter', sans-serif;
     color: var(--text-color);
     font-weight: 400;
     font-size: 1.2em;
 }
 h4{
-    font-family: 'Space Mono', monospace;
+    font-family: 'Inter', sans-serif;
     color: var(--text-color);
     font-size: 1em;
     font-weight: 400;
@@ -84,10 +83,10 @@ ul{
 
 header{
     position: fixed;
+    width: 100vw;
 
     top: 0;
-    padding: 2rem;
-    width: 100vw;
+    padding: 2rem 0;
 
     left: 50%;
     transform: translateX(-50%);
@@ -101,7 +100,7 @@ header{
 }
 
 header .container{
-    width: 80vw;
+    width: 70vw;
     max-width: 1000px;
     display: flex;
     justify-content: space-between;
@@ -118,15 +117,15 @@ nav ul li{
 }
 
 nav ul li a{
-    font-size: 0.8rem;
-    font-weight: 700;
+    font-size: 0.9rem;
+    font-weight: 400;
     text-decoration: none;
 }
 
-nav ul li a:hover{
+a:hover{
     text-decoration: underline;
 }
-nav ul li a:active{
+a:active{
     text-decoration: none;
 }
 
@@ -144,18 +143,46 @@ svg > *{
 
 /* snapping scroll between sections */
 main{
+    padding: 0 15vw;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
-    height: 100vh;
+    margin-top: 6em;
+    height: 89vh;
 }
 
 section{
     display: flex;
-    height: 100vh;
     flex-direction: column;
+    height: 100%;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     scroll-snap-align: start;
+    flex-wrap: wrap;
+    margin: 1em;
+}
+
+.about{
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.about .container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.about-img{
+    width: 18em;
+}
+
+.about .text-container{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 /* heading typing animation */
@@ -170,6 +197,11 @@ section{
         border-color: transparent;
     }
 }
+
+.about .container > *{
+    padding: 1em;
+}
+
 .about .heading{
     font-family: 'Space Mono', monospace;
     font-weight: 400;
@@ -184,22 +216,21 @@ section{
 }
 
 .about .summary{
-    width: 40vw;
-    text-align: center;
+    width: 100%;
+    text-align: left;
+    margin: 0.2em;
 }
 
-#about-more_button{
+#about-cv_button{
+    text-align: left;
     color: var(--text-color);
     font-weight: 700;
-}
-
-#about-more_summary{
-    display: none;
+    margin: 0.2em;
 }
 
 .about .exit{
     position: relative;
-    top: 10%;
+    bottom: 10%;
     margin-top: 5rem;
     display: flex;
     flex-direction: column;
@@ -208,23 +239,24 @@ section{
 }
 
 .about .exit > *{
-    margin: 3px;
+    margin: 0.2em;
 }
 
-.cv{
-    display: flex;
+.cv > *{
+    margin: 0.2em;
 }
 
-.cv .container{
+.projects > *{
+    margin: 0.2em;
+}
+
+.find-me .container{
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     padding: 1em;
 }
 
-.cv .container > *{
-    margin: 1em;
-}
 .tab {
     padding-left: 0em;
 }
@@ -246,6 +278,11 @@ section{
 
 @media only screen and (max-width: 375px) {
     main{
+        padding: 0 15vw;
+        margin-top: 6em;
+        height: auto;
+        display: flex;
+        flex-direction: column;
         overflow-y: scroll;
         scroll-snap-type: none;
     }
@@ -262,13 +299,8 @@ section{
     .about .heading{
         font-size: 15vw;
     }
-    
-    .about .summary{
-        width: 80vw;
-    }
-    
-    .cv{
-        font-size: 2vh;
+    .about .text-container{
+        width: 100%;
     }
 }
 @media only screen and (max-height: 490px) {
