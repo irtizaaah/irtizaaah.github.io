@@ -1,0 +1,54 @@
+/* Colors */
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --secondary-text-color: #6a7280;
+}
+
+body.theme-dark {
+    --background-color: #000000;
+    --text-color: #ffffff;
+    --secondary-text-color: #B6BBC4;
+}
+  
+/* Typography */
+:root {
+    --base-font-size: 16px;
+
+    --paragraph-font-size: 0.9em;
+    --subheading-font-size:2em;
+    --heading-font-size: 3em;
+
+    --heading-font-family: 'Space Mono', monospace;
+    --paragraph-font-family: 'Inter', sans-serif;
+}
+
+/* Spacing */
+:root {
+    --spacing-unit: 8px;
+
+    --space-small: var(--spacing-unit);
+    --space-medium: calc(2 * var(--spacing-unit));
+    --space-large: calc(4 * var(--spacing-unit));
+}
+
+/* Sizing */
+:root{
+    --body-width: 80vw;
+    --body-max-width: 1000px;
+    --header-height: 5rem;
+
+    --decor-heading-width: 10vw;
+    --img-width: 20em;
+    
+    --decor-heading-width-mobile: 4rem;
+    --img-width-mobile: 96%;
+
+    --decor-heading-width-max: 6rem;
+}
+/* Z-index */
+:root {
+    --z-index-low: 1;
+    --z-index-medium: 10;
+    --z-index-high: 100;
+}

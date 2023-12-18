@@ -5,16 +5,16 @@ const body = document.body;
 const toggleTheme = () => {
   body.classList.toggle("theme-dark");
   const isDarkTheme = body.classList.contains("theme-dark");
-  // Save the theme preference to localStorage
-  localStorage.setItem("theme", isDarkTheme ? "dark" : "light");
+  localStorage.setItem("theme", isDarkTheme ? "dark" : "light"); // save the theme preference to localStorage
 };
-// Event listener to toggle the theme on button click
-buttonTheme.addEventListener("click", toggleTheme);
 
 // Check for the theme preference in localStorage on page load
-document.addEventListener("DOMContentLoaded", () => {
+const setSavedTheme = () => {
   const savedTheme = localStorage.getItem("theme");
   if (savedTheme === "dark") {
     body.classList.add("theme-dark");
   }
-});
+};
+
+buttonTheme.addEventListener("click", toggleTheme);
+document.addEventListener("DOMContentLoaded", setSavedTheme)
